@@ -10,7 +10,7 @@ function do_sth_with_PlayerParty(playerId, membername)
 	end
 end
 
-Q3 sol:
+===Q3 sol:===
 
 -- make function name better
 -- make player variable local
