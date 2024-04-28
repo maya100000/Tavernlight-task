@@ -22,7 +22,7 @@ void Game::addItemToPlayer(const std::string& recipient, uint16_t itemId)
 	}
 }
 
-// Q4 sol:
+// ===Q4 sol:===
 // if the player pointer points to a new allocation
 //  -  free player object whenever the function ends.
 
