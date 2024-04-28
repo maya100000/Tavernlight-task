@@ -1,6 +1,5 @@
 # Q5 explanation:
 
-
 Stumbled upon Eternal Winter, a spell that seemed to fit the bill, while diving into the depths of the Tibia fandom wiki, scanning for a spell with a frosty flair.
 
 Next up, delved into the labyrinth of Lua scripts nestled within the server files, tracing the path of attack spells. After a bit of sleuthing, unearthed an XML file and the spell Lua files themselves. Got a peek into how the spells and their battlegrounds were etched into existence.
