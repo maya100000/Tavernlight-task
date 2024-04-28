@@ -1,2 +1,20 @@
-# Tavernlight-task BY Maya Sasson
-technical trial task  (C++ and Lua)
+# Q5 explanation:
+
+
+Stumbled upon Eternal Winter, a spell that seemed to fit the bill, while diving into the depths of the Tibia fandom wiki, scanning for a spell with a frosty flair.
+
+Next up, delved into the labyrinth of Lua scripts nestled within the server files, tracing the path of attack spells. After a bit of sleuthing, unearthed an XML file and the spell Lua files themselves. Got a peek into how the spells and their battlegrounds were etched into existence.
+
+Keen to replicate the frosty dance seen in the video, I delved deeper into the intricacies of the area matrix in the /data/spells/lib/spells.lua. Took a quick jaunt through the forums to decode the meaning behind the numbers:
+
+1 - damage block.
+2 - player position.
+3 - player position + self-damage.
+
+With the matrix scribbled down, I made the leap to a newer fork of the OTClient, hewn from the very foundation you linked in the email. After a bit of tinkering and a pinch of patience, the frosty rendering sprung to life as expected.
+
+I will try to animate and swap out areas of attack to fit the given question pattern.
+
+A handy forum post explained nicely how to "animate" spells. Looks like addEvent is the trick. We can't have spell animations go "frame by frame", but rather, we delay the calls to each area attack matrix.
+
+I conveniently used a tool called SpellCreator linked in the documentation of OpenTibia to manually draw patterns instead of painstakingly correcting the matrix. I got the matrices from there and finally, the animation is created. I observed the video given frame by frame and approximated the animations. Looks like it looks approximately three times.
