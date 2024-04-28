@@ -11,7 +11,7 @@ end
 return true
 end
 
-Q1 sol:
+===Q1 sol:===
 -- add null check
 local function releaseStorage(player)
      if player then
