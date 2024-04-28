@@ -1,0 +1,10 @@
+Module
+  name: game_jump
+  description: Display a window of jump
+  author: Maya Sasson
+  website: https://github.com/maya100000
+  sandboxed: true
+  autoload: true
+  scripts: [ game_jump ]
+  @onLoad: init()
+  @onUnload: terminate()
