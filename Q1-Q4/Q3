@@ -1,0 +1,37 @@
+Q3 - Fix or improve the name and the implementation of the below method
+
+function do_sth_with_PlayerParty(playerId, membername)
+	player = Player(playerId)
+	local party = player:getParty()
+		for k,v in pairs(party:getMembers()) do
+				if v == Player(membername) then
+					party:removeMember(Player(membername))
+				end
+	end
+end
+
+Q3 sol:
+
+-- make function name better
+-- make player variable local
+-- check if player's party isn't nil.
+-- going over party's members using for loop instead of using an iterator (pairs).
+-- not creating a player object for each comparison
+-- not creating a player object for the delete/removal of the member from the party's members.
+
+-- comparing members' names and not the member objects themselves.
+-- this is both more effecient and more correct since we don't assume 
+-- the player class's  overrides the __eq method and its implementation is to check player's name.
+function removeMemberFromPlayerParty(playerId, membername)
+	local player = Player(playerId)
+	local party = player:getParty()
+	if party then
+	         local members = party:getMembers()
+			 for i=1, #members do
+			      if members[i]:getName() == membername then
+						party:removeMember(members[i])
+						break;
+					end
+	        end
+	end
+end
