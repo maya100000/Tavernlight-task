@@ -1,0 +1,28 @@
+### Q7 explanation:
+
+This Lua script defines a module that creates a graphical user interface (GUI) window containing a button labeled "Jump!" which moves within the window. Here's a breakdown of its functionality:
+
+*Module Description: The commented block at the top provides an overview of what the module does. It explains that the module creates a window with a moving button. The button randomizes its Y-position when it hits the left edge of the window and also when clicked.
+*Variables:
+   *jumpWindow and jumpBtn: Local variables used to store references to the GUI window and button, respectively.
+   *clickEvent: Event variable used to handle the scrolling animation of the button.
+   *scrollIncrement: Number of pixels the button moves horizontally each time it scrolls.
+   *scrollSpeed: Time interval (in milliseconds) between each movement of the button.
+   *leftPadding, rightPadding, topBtmPadding: Padding values to keep the button within the bounds of the window.
+*Initialization (init() function):
+   *Connects to game events onGameStart and onGameEnd, triggering onLogin() and onLogout() functions, respectively.
+   *Creates the window based on OTUI code and hides it initially.
+   *Retrieves the button widget from the window.
+*Termination (terminate() function):
+   *Disconnects from game events when the module is terminated.
+   *Destroys the window upon termination.
+*Login and Logout Handling:
+   *onLogin() function shows the window, resets the button position, and starts the button animation.
+   *onLogout() function stops the button animation and hides the window.
+*Button Positioning and Animation:
+   *btnReset() function resets the button's position to the right edge of the window with a random Y-position within the window's height.
+   *btnMove() function animates the button scrolling from right to left within the window. If the button reaches the left edge of the window, it calls btnReset() to reposition the button.
+   *jumpReset() function hides the window and stops the button animation upon logout.
+
+
+This script enhances the user interface by providing a dynamic and interactive element within the game environment, adding visual interest and engagement for the player.
